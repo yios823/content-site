@@ -1,0 +1,74 @@
+---
+const articles = [
+  {
+    title:
+      "Semi-Automatic vs Super-Automatic Espresso Machines: Which Type " +
+      "Fits an Indian Kitchen?",
+    href: "/content-site/semi-automatic-vs-super-automatic-espresso-machine-india/",
+    description:
+      "Decision-criteria comparison framed for Indian kitchens, 220V, " +
+      "hard water, monsoon humidity, and compact counters.",
+    pillar: "1A",
+    publishDate: "2026-05-27",
+  },
+];
+---
+<!doctype html>
+<html lang="en-IN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home Espresso India: Buyer Guides and Reviews</title>
+    <meta
+      name="description"
+      content="Practical, India-focused guides to choosing and using a home espresso machine. 220V, hard water, monsoon humidity, INR pricing."
+    />
+    <style>
+      :root {
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+        line-height: 1.6;
+        color: #1a1a1a;
+        background: #fafafa;
+      }
+      body { margin: 0; }
+      main {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 3rem 1.25rem 6rem;
+      }
+      h1 { font-size: 1.8rem; }
+      .lede { color: #555; }
+      article { padding: 1.25rem 0; border-bottom: 1px solid #e5e5e5; }
+      article:last-child { border-bottom: none; }
+      a { color: #0a66c2; text-decoration: none; }
+      a:hover { text-decoration: underline; }
+      .meta { color: #888; font-size: 0.9rem; margin-top: 0.25rem; }
+      footer { margin-top: 4rem; font-size: 0.9rem; color: #888; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Home Espresso India</h1>
+      <p class="lede">
+        Practical buyer guides and reviews for home espresso in India.
+        220V, hard water, monsoon humidity, INR pricing. Pillar 1 in
+        progress: Choosing Your First Home Espresso Machine.
+      </p>
+      {articles.map((a) => (
+        <article>
+          <h2><a href={a.href}>{a.title}</a></h2>
+          <p>{a.description}</p>
+          <p class="meta">Sub-pillar {a.pillar} · {a.publishDate}</p>
+        </article>
+      ))}
+      <footer>
+        <p>
+          Affiliate disclosure: Pages on this site contain Amazon India
+          affiliate links. We earn a small commission on qualifying
+          purchases at no extra cost to you.
+        </p>
+      </footer>
+    </main>
+  </body>
+</html>
